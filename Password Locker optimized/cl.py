@@ -21,7 +21,7 @@ def open(filename,MASTER):
 
     masterPassword.setNew(GUI.validateMasterPassword(masterPassword.value, passwords))
 
-    stringSearcher = re.compile(r'"(\w|\s)+"')
+    stringSearcher = re.compile(r'"(\w|\s|\W)+"')
     placeholder = GUI.generateNewPassword(30)
     while True:
 
