@@ -31,10 +31,10 @@ def open(filename,MASTER):
         filename_with_spaces = stringSearcher.search(textinput)
         
         if filename_with_spaces:
-            filename = filename_with_spaces.group()
-            textinput = textinput.replace(filename,placeholder)
+            x = filename_with_spaces.group()
+            textinput = textinput.replace(x,placeholder)
             cmd = textinput.split()
-            cmd[cmd.index(placeholder)] = filename[1:-1]
+            cmd[cmd.index(placeholder)] = x[1:-1]
             placeholder = GUI.generateNewPassword(30)
 
         else:
